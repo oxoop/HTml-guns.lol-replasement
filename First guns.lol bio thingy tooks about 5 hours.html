@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(10, 10, 10) ; color: wheat;">
+
+<head>
+
+<style>
+.bigborder{
+   background-color: rgb(61, 61, 61); 
+   height: 500px;
+   width: 500px;
+   border-radius: 10px;
+    position: relative;
+   margin: auto;
+   top: 50px;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.bigborder::after{
+    height: 102%;
+   width: 102%;
+   border-radius: 10px;
+   z-index: -1;
+    margin: auto;
+    top: -1%;
+    right: -1%;
+   content: '';
+   position: absolute;
+   background-image: conic-gradient(from var(--angle), #381010, #6c1010, #381010);
+    animation: 3s spin linear infinite;
+    filter: blur(10px);
+}
+@keyframes spin{
+    from {
+        --angle:0deg;
+    } to {
+        --angle:360deg;
+    }
+}
+.text{
+    font-family: ink free;
+    position: relative;
+    text-shadow: 0 0 10px;
+    color: #d0c1df; 
+    background-color: #3a1212;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0;
+    transition-timing-function: ease;
+    width: 440px;
+    
+}
+.text:hover{
+    width: 270px;
+    filter: blur(2px);
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="bigborder">
+    <div class="text" style="padding: 30px; font-size: 30px; margin: auto; text-align: center; border-bottom-style:double ; border-color: #7f0909; border-width: 5px; border-bottom-right-radius:0px; border-bottom-left-radius: 0px;" >I heart html.</div>
+    <img src="https://i.pinimg.com/originals/9b/18/93/9b189304d14e90293b2a833a5bdbcce7.gif" style="width: 500px; filter: blur(1px);" >
+    <div class="text" style="width: 500px; height: 120px; bottom: 5px; border-top-right-radius:0px; border-top-left-radius: 0px; border-top-style: double; border-color: #7f0909;">
+        <div class="text" style="margin-top: 10px; margin-left:12px;">sss</div>
+        <div class="text"style="margin-left:12px;">sss</div>
+        <div class="text"style="margin-left:12px;">sss</div>
+        <div class="text"style="margin-left:12px;">sss</div>
+        <div class="text" style="margin-left:12px;">sss</div>
+        
+        </div>
+
+</body>
+</html>
